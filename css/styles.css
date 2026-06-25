@@ -393,7 +393,7 @@ footer ul li a:hover { color: #c8d8e0; }
   border-top-color: var(--red);
   box-shadow: 0 6px 20px rgba(0,0,0,0.09);
 }
-.service-card .card-icon { font-size: 32px; margin-bottom: 14px; }
+.service-card .card-icon { display: block; margin-bottom: 14px; }
 .service-card h3 {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 700;
@@ -440,7 +440,7 @@ footer ul li a:hover { color: #c8d8e0; }
 }
 .service-block:last-child { border-bottom: none; }
 .service-block-left { position: sticky; top: 88px; }
-.service-block-icon { font-size: 48px; margin-bottom: 16px; }
+.service-block-icon { display: block; margin-bottom: 16px; }
 .service-block-left h2 {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 900;
