@@ -2,13 +2,13 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --charcoal: #1c2b33;
-  --charcoal-light: #243340;
-  --red: #c0392b;
-  --red-dark: #a93226;
-  --offwhite: #f5f5f0;
-  --text: #222;
-  --muted: #6b7a84;
+  --charcoal: #0a1628;
+  --charcoal-light: #112038;
+  --red: #1d6fa4;
+  --red-dark: #175d8a;
+  --offwhite: #f4f6f8;
+  --text: #1a2332;
+  --muted: #64748b;
 }
 
 html { scroll-behavior: smooth; }
