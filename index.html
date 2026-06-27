@@ -49,7 +49,16 @@
     </div>
   </nav>
 
-  <section class="hero" style="background: linear-gradient(rgba(28,43,51,0.55), rgba(28,43,51,0.55)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center/cover no-repeat;">
+  <section class="hero">
+    <!-- Slider backgrounds -->
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image: url('images/slider_1-d0cf9f1b36.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('images/slider_2-d932d34fc2.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('images/slider_3-5731d96eb2.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('images/slider_4-3d6110f388.jpg');"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
     <div class="hero-inner">
       <div class="hero-content">
         <p class="hero-eyebrow">Charlotte, NC Appliance Repair</p>
@@ -61,6 +70,14 @@
         <p class="hero-phone-label">Call Anytime — 24/7</p>
         <a href="tel:7042928429" class="hero-phone">704-292-8429</a>
       </div>
+    </div>
+
+    <!-- Dot indicators -->
+    <div class="hero-dots">
+      <button class="hero-dot active" data-index="0" aria-label="Slide 1"></button>
+      <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
+      <button class="hero-dot" data-index="2" aria-label="Slide 3"></button>
+      <button class="hero-dot" data-index="3" aria-label="Slide 4"></button>
     </div>
   </section>
 
@@ -181,5 +198,33 @@
   </footer>
 
   <script src="main.js"></script>
+  <script>
+    // Hero slider
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    let current = 0;
+    let paused = false;
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        goTo(parseInt(dot.dataset.index));
+        paused = true;
+        setTimeout(() => paused = false, 6000);
+      });
+    });
+
+    document.querySelector('.hero').addEventListener('mouseenter', () => paused = true);
+    document.querySelector('.hero').addEventListener('mouseleave', () => paused = false);
+
+    setInterval(() => { if (!paused) goTo(current + 1); }, 5000);
+  </script>
 </body>
 </html>

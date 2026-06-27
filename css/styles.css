@@ -4,8 +4,8 @@
 :root {
   --charcoal: #0a1628;
   --charcoal-light: #112038;
-  --red: #1d6fa4;
-  --red-dark: #175d8a;
+  --red: #c8311f;
+  --red-dark: #a82718;
   --offwhite: #f4f6f8;
   --text: #1a2332;
   --muted: #64748b;
@@ -286,13 +286,36 @@ footer ul li a:hover { color: #c8d8e0; }
 }
 
 /* ─────────────────────────────────────────
-   INDEX PAGE
+   INDEX PAGE — HERO SLIDER
 ───────────────────────────────────────── */
 .hero {
-  background: var(--charcoal);
+  position: relative;
+  overflow: hidden;
   padding: 80px 24px;
 }
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+.hero-slide.active { opacity: 1; }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(10,22,40,0.62), rgba(10,22,40,0.62));
+  z-index: 1;
+}
 .hero-inner {
+  position: relative;
+  z-index: 2;
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
@@ -350,7 +373,31 @@ footer ul li a:hover { color: #c8d8e0; }
   text-transform: uppercase;
   margin-bottom: 8px;
 }
+.hero-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.6);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+  padding: 0;
+}
+.hero-dot.active {
+  background: #fff;
+  border-color: #fff;
+}
 
+/* ── TRUST BAR ── */
 .trust-bar {
   background: var(--offwhite);
   border-bottom: 3px solid #e0e0d8;
@@ -651,7 +698,7 @@ footer ul li a:hover { color: #c8d8e0; }
   margin-bottom: 24px;
   transition: color 0.15s;
 }
-.phone-hero .big-phone:hover { color: #e04535; }
+.phone-hero .big-phone:hover { color: var(--red-dark); }
 .phone-hero .sub { font-size: 16px; color: #8fa8b4; margin-bottom: 32px; }
 
 .hours-band {
@@ -834,7 +881,7 @@ footer ul li a:hover { color: #c8d8e0; }
   /* Index hero */
   .hero-inner { flex-direction: column; gap: 32px; }
   .hero-phone-wrap { order: -1; text-align: center; }
-  .hero-phone { font-size: 64px; }
+  .hero-phone { font-size: 64px; white-space: nowrap; }
 
   /* Trust bar */
   .trust-inner { grid-template-columns: 1fr; }
