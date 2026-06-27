@@ -168,6 +168,27 @@ section { padding: 72px 24px; }
 }
 .btn-primary:hover { background: var(--red-dark); transform: translateY(-1px); }
 
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 2px solid rgba(255,255,255,0.5);
+  transition: border-color 0.15s, background 0.15s, transform 0.1s;
+}
+.btn-secondary:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-1px);
+}
+
 .btn-white {
   display: inline-block;
   background: #fff;
@@ -183,6 +204,30 @@ section { padding: 72px 24px; }
   transition: background 0.15s, transform 0.1s;
 }
 .btn-white:hover { background: var(--offwhite); transform: translateY(-1px); }
+
+/* ── HERO CTA GROUP ── */
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+/* ── HERO TRUST ROW ── */
+.hero-trust-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.75);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
+.hero-trust-row .trust-divider {
+  margin: 0 10px;
+  opacity: 0.4;
+}
 
 /* ── CTA STRIP ── */
 .cta-strip {
@@ -351,7 +396,7 @@ footer ul li a:hover { color: #c8d8e0; }
   font-size: 17px;
   color: #e0e8f0;
   line-height: 1.6;
-  margin-bottom: 36px;
+  margin-bottom: 28px;
   max-width: 480px;
   text-shadow: 0 1px 6px rgba(0,0,0,0.7);
 }
@@ -885,6 +930,9 @@ footer ul li a:hover { color: #c8d8e0; }
   .hero-inner { flex-direction: column; gap: 32px; }
   .hero-phone-wrap { order: -1; text-align: center; }
   .hero-phone { font-size: 64px; white-space: nowrap; }
+  .hero-ctas { flex-direction: column; }
+  .hero-trust-row { font-size: 12px; }
+  .hero-trust-row .trust-divider { display: none; }
 
   .trust-inner { grid-template-columns: 1fr; }
   .trust-item { border-right: none; border-bottom: 1px solid #deded4; }
