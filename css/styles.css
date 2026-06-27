@@ -298,7 +298,7 @@ footer ul li a:hover { color: #c8d8e0; }
 }
 .footer-bottom a { color: #3d5260; text-decoration: none; }
 
-/* ── PAGE HERO (services, about, contact) ── */
+/* ── PAGE HERO (services, about, contact etc.) ── */
 .page-hero {
   background: var(--charcoal);
   padding: 64px 24px 56px;
@@ -310,7 +310,8 @@ footer ul li a:hover { color: #c8d8e0; }
   font-size: 13px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--gold);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
   margin-bottom: 14px;
 }
 .page-hero h1 {
@@ -322,13 +323,15 @@ footer ul li a:hover { color: #c8d8e0; }
   letter-spacing: 0.02em;
   line-height: 1.0;
   margin-bottom: 16px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 .page-hero p {
   font-size: 17px;
-  color: #aabbc4;
+  color: #e0e8f0;
   max-width: 560px;
   margin: 0 auto 28px;
   line-height: 1.6;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
 }
 
 /* ─────────────────────────────────────────
@@ -418,7 +421,7 @@ footer ul li a:hover { color: #c8d8e0; }
   font-family: 'Inter', sans-serif;
   font-size: 12px;
   font-weight: 500;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -723,7 +726,7 @@ footer ul li a:hover { color: #c8d8e0; }
   font-size: 13px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--gold);
   margin-bottom: 14px;
 }
 .phone-hero h1 {
