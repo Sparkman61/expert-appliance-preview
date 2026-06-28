@@ -394,13 +394,13 @@ footer ul li a:hover { color: #c8d8e0; }
   margin-bottom: 20px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
-.hero h1 span { color: var(--red); }
+.hero h1 span { color: var(--red); white-space: nowrap; }
 .hero-sub {
   font-size: 17px;
   color: #e0e8f0;
   line-height: 1.6;
   margin-bottom: 28px;
-  max-width: 480px;
+  max-width: 420px;
   text-shadow: 0 1px 6px rgba(0,0,0,0.7);
 }
 .hero-phone {
