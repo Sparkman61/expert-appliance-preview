@@ -334,6 +334,30 @@ footer ul li a:hover { color: #c8d8e0; }
   text-shadow: 0 1px 6px rgba(0,0,0,0.5);
 }
 
+/* Expert seal card */
+.expert-seal {
+  background: rgba(255,255,255,0.96);
+  border-radius: 6px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+  padding: 1.6rem 1.5rem;
+  border-top: 4px solid var(--red);
+}
+.expert-seal-top {
+  display: flex; align-items: center; gap: 1rem;
+  padding-bottom: 1rem; border-bottom: 1px solid #e0e0d8; margin-bottom: 1rem;
+}
+.expert-seal-score {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: 2.8rem; line-height: 1; color: var(--charcoal);
+}
+.expert-seal-stars { color: var(--gold); font-size: 1rem; letter-spacing: 0.08em; }
+.expert-seal-reviews { font-size: 0.82rem; color: #666; font-weight: 500; margin-top: 0.2rem; }
+.expert-seal-list { display: flex; flex-direction: column; gap: 0.85rem; }
+.expert-seal-item { display: flex; gap: 0.6rem; align-items: flex-start; }
+.expert-seal-check { color: var(--red); font-size: 0.9rem; margin-top: 0.1rem; flex-shrink: 0; font-weight: 700; }
+.expert-seal-item b { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--charcoal); display: block; }
+.expert-seal-item span { font-size: 0.82rem; color: #666; line-height: 1.45; }
+
 /* ─────────────────────────────────────────
    INDEX PAGE — HERO SLIDER
 ───────────────────────────────────────── */
